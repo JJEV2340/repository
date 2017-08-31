@@ -34,7 +34,7 @@ public class Person1 {
 	  // If string is less than 3 characters
 	  // then rotation doesn't mean anything
 	  if(input.length() < 3)
-        return input;
+		return input;
 	  	
 	  // Strings are immutable and I don't want to 
 	  // import StringBuilder, so we will inefficiently 
