@@ -30,8 +30,23 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 1 put your implementation here
-	  return null;
+	
+	  // If string is less than 3 characters
+	  // then rotation doesn't mean anything
+	  if(input.length() < 3)
+        return input;
+	  	
+	  // Strings are immutable and I don't want to 
+	  // import StringBuilder, so we will inefficiently 
+	  // re-copy to build up this string
+	  String input_Adj = "";
+	  for(int i = 2; i < input.length(); i++) {
+		input_Adj += input.charAt(i);  
+	  }
+	  for(int i = 0; i < 2; i++) {
+	  	input_Adj += input.charAt(i);
+	  }
+	  return input_Adj;
 	}
 	
 	/**
